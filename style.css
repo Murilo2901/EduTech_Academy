@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  /* Tipografia */
+  --font-title: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Modo Claro */
+  --bg: #F9F9F9;
+  --text: #1E1E1E;
+  --primary: #0077CC;
+  --card: #FFFFFF;
+  --hover: #005FA3;
+  --border: #E0E0E0;
+
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --radius: 16px;
+  --container: 1100px;
+}
+
+body.dark {
+  /* Modo Escuro */
+  --bg: #1E1E1E;
+  --text: #F9F9F9;
+  --primary: #4DA6FF;
+  --card: #2C2C2C;
+  --hover: #66BFFF;
+  --border: #444444;
+
+  --shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+  letter-spacing: 0.3px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background: rgba(0, 119, 204, 0.10);
+  color: var(--hover);
+}
+
+nav a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  border-radius: 0;
+}
+
+.theme-btn {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.theme-btn:hover {
+  border-color: var(--primary);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 52px 0 24px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: 2.3rem;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+.hero-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.hero-box h3 {
+  font-family: var(--font-title);
+  margin-bottom: 8px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.badge {
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: rgba(0, 119, 204, 0.07);
+}
+
+/* =========================
+   SECTION
+========================= */
+section {
+  padding: 26px 0;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   CARDS CURSOS
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.card .thumb {
+  height: 150px;
+  background: linear-gradient(135deg, rgba(0,119,204,0.18), rgba(0,119,204,0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.card .content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card h3 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.card ul {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.card .btn {
+  margin-top: auto;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--hover);
+  border-color: var(--hover);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--primary);
+}
+
+.btn.secondary:hover {
+  background: rgba(0, 119, 204, 0.12);
+  border-color: var(--hover);
+  color: var(--hover);
+}
+
+/* =========================
+   MATRÍCULA (FORM + SIDEBAR)
+========================= */
+.enroll-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.form-box, .sidebar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.form-box h3 {
+  font-family: var(--font-title);
+  margin-bottom: 8px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 700;
+}
+
+.field input, .field select {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 11px 12px;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input:focus, .field select:focus {
+  border-color: var(--primary);
+}
+
+.field small {
+  color: #ff3b3b;
+  font-weight: 700;
+  min-height: 18px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.sidebar h3 {
+  font-family: var(--font-title);
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.sidebar li {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 600;
+  background: rgba(0, 119, 204, 0.06);
+}
+
+/* =========================
+   PÁGINA CURSO (DETALHES)
+========================= */
+.course-page {
+  padding: 32px 0;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.course-main, .course-info {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.course-main h1 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.course-main p {
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.course-main h3 {
+  font-family: var(--font-title);
+  margin: 18px 0 10px;
+}
+
+.course-main ul {
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.course-info h3 {
+  font-family: var(--font-title);
+  margin-bottom: 10px;
+}
+
+.course-info ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 26px;
+  background: var(--card);
+}
+
+.footer-grid {
+  padding: 24px 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 18px;
+}
+
+.footer-grid h4 {
+  font-family: var(--font-title);
+  margin-bottom: 8px;
+}
+
+.footer-grid p, .footer-grid li, .footer-grid a {
+  opacity: 0.95;
+}
+
+.footer-grid ul {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 12px 0;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 980px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid, .enroll-grid, .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  nav ul {
+    gap: 8px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
