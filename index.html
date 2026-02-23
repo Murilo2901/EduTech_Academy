@@ -1,65 +1,172 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduTech Academy | Home</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">🎓</span>
-        <div>
-          <strong class="brand-name">EduTech Academy</strong>
-          <small class="brand-tagline">Educação que transforma</small>
+    <header>
+        <div class="logo">EduTech Academy</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="#matricula">Matrícula</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Construa Seu Futuro com a EduTech Academy</h1>
+            <p>Cursos de alta qualidade para impulsionar sua carreira e transformar sua vida profissional.</p>
+        </section>
+
+        <section class="courses-section">
+            <h2>Nossos Cursos</h2>
+            <br>
+            <div class="courses-grid">
+                <div class="card">
+                    <h3>Desenvolvimento Web Fullstack</h3>
+                    <p>📘 120 horas</p>
+                    <p>🖥️ EAD</p>
+                    <a href="curso-web.html" class="btn">Ver detalhes</a>
+                </div>
+                <div class="card">
+                    <h3>Data Science & Machine Learning</h3>
+                    <p>📘 100 horas</p>
+                    <p>🏫 Presencial</p>
+                    <a href="curso-datascience.html" class="btn">Ver detalhes</a>
+                </div>
+                <div class="card">
+                    <h3>Marketing Digital & SEO</h3>
+                    <p>📘 80 horas</p>
+                    <p>🖥️ EAD</p>
+                    <a href="curso-marketing.html" class="btn">Ver detalhes</a>
+                </div>
+                <div class="card">
+                    <h3>UX/UI Design</h3>
+                    <p>📘 90 horas</p>
+                    <p>🏫 Presencial</p>
+                    <a href="curso-uxui.html" class="btn">Ver detalhes</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="matricula" class="content-wrapper">
+            <div class="form-section">
+                <h2>Matrícula</h2>
+                <p>Formulário de Matrícula</p>
+                <br>
+                <form id="matricula-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome">
+                        <span class="error-msg" id="nome-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="text" id="email" name="email">
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input type="text" id="telefone" name="telefone">
+                        <span class="error-msg" id="telefone-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF *</label>
+                        <input type="text" id="cpf" name="cpf">
+                        <span class="error-msg" id="cpf-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="curso">Curso Desejado *</label>
+                        <select id="curso" name="curso">
+                            <option value="">Selecione um curso</option>
+                            <option value="web">Desenvolvimento Web Fullstack</option>
+                            <option value="data">Data Science & Machine Learning</option>
+                            <option value="marketing">Marketing Digital & SEO</option>
+                            <option value="uxui">UX/UI Design</option>
+                        </select>
+                        <span class="error-msg" id="curso-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP * (Apenas números)</label>
+                        <input type="text" id="cep" name="cep" maxlength="8">
+                        <span class="error-msg" id="cep-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rua">Rua *</label>
+                        <input type="text" id="rua" name="rua">
+                        <span class="error-msg" id="rua-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="bairro">Bairro *</label>
+                        <input type="text" id="bairro" name="bairro">
+                        <span class="error-msg" id="bairro-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade">
+                        <span class="error-msg" id="cidade-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado *</label>
+                        <input type="text" id="estado" name="estado">
+                        <span class="error-msg" id="estado-error"></span>
+                    </div>
+                    <button type="submit" class="btn">Enviar Matrícula</button>
+                </form>
+            </div>
+
+            <aside class="sidebar">
+                <h3>Áreas do Conhecimento</h3>
+                <ul>
+                    <li>Tecnologia da Informação</li>
+                    <li>Administração e Negócios</li>
+                    <li>Marketing Digital</li>
+                    <li>Design Gráfico</li>
+                    <li>Engenharia</li>
+                    <li>Saúde</li>
+                    <li>Educação</li>
+                    <li>Gastronomia</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>EduTech Academy</h4>
+                <p>Transformando carreiras através da educação de qualidade desde 2010.</p>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p>📞 (11) 99999-9999</p>
+                <p>✉️ contato@edutechacademy.com.br</p>
+                <p>📍 Av. Paulista, 1000 – São Paulo/SP</p>
+            </div>
+            <div>
+                <h4>Redes Sociais</h4>
+                <p>
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Instagram</a> | 
+                    <a href="#">Twitter</a> | 
+                    <a href="#">LinkedIn</a>
+                </p>
+            </div>
         </div>
-      </div>
-
-      <nav class="nav" aria-label="Menu principal">
-        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-        <ul class="nav-list">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="cursos.html">Cursos</a></li>
-          <li><a href="#matricula">Matrícula</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li>
-            <button class="theme-btn" id="themeToggle" type="button" aria-label="Alternar tema">
-              <span class="theme-icon" aria-hidden="true">🌙</span>
-              <span class="theme-text">Tema</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="conteudo">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Construa Seu Futuro com a EduTech Academy</h1>
-          <p>
-            Cursos de alta qualidade para impulsionar sua carreira e transformar sua vida
-            profissional.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="cursos.html">Ver cursos</a>
-            <a class="btn btn-outline" href="#matricula">Fazer matrícula</a>
-          </div>
+        <div class="footer-bottom">
+            <p>© 2025 EduTech Academy. Todos os direitos reservados.</p>
         </div>
+    </footer>
 
-        <div class="hero-card" aria-label="Destaque">
-          <h2>Por que a EduTech?</h2>
-          <ul class="checklist">
-            <li>Professores com experiência real no mercado</li>
-            <li>Projetos práticos e portfólio</li>
+    <script src="script.js"></script>
+</body>
 </html>
