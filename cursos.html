@@ -1,65 +1,80 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduTech Academy | Cursos</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Academy | Cursos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+        <div class="logo">EduTech Academy</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html" style="font-weight: bold; color: var(--primary-color);">Cursos</a></li>
+                <li><a href="index.html#matricula">Matrícula</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">🎓</span>
-        <div>
-          <strong class="brand-name">EduTech Academy</strong>
-          <small class="brand-tagline">Educação que transforma</small>
+    <main>
+        <section class="hero">
+            <h1>Nossos Cursos</h1>
+            <p>Conheça os cursos disponíveis na EduTech Academy e encontre o melhor para o seu futuro profissional.</p>
+        </section>
+
+        <section class="courses-grid">
+            <div class="card">
+                <h3>Desenvolvimento Web Fullstack</h3>
+                <p>📘 120 horas</p>
+                <p>🖥️ EAD</p>
+                <a href="curso-web.html" class="btn">Ver detalhes</a>
+            </div>
+            <div class="card">
+                <h3>Data Science & Machine Learning</h3>
+                <p>📘 100 horas</p>
+                <p>🏫 Presencial</p>
+                <a href="curso-datascience.html" class="btn">Ver detalhes</a>
+            </div>
+            <div class="card">
+                <h3>Marketing Digital & SEO</h3>
+                <p>📘 80 horas</p>
+                <p>🖥️ EAD</p>
+                <a href="curso-marketing.html" class="btn">Ver detalhes</a>
+            </div>
+            <div class="card">
+                <h3>UX/UI Design</h3>
+                <p>📘 90 horas</p>
+                <p>🏫 Presencial</p>
+                <a href="curso-uxui.html" class="btn">Ver detalhes</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>EduTech Academy</h4>
+                <p>Transformando carreiras através da educação de qualidade desde 2010.</p>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p>📞 (11) 99999-9999</p>
+                <p>✉️ contato@edutechacademy.com.br</p>
+                <p>📍 Av. Paulista, 1000 – São Paulo/SP</p>
+            </div>
+            <div>
+                <h4>Redes Sociais</h4>
+                <p><a href="/imagens/facebook.svg">Facebook</a> | <a href="/imagens/instagram.svg">Instagram</a> | <a href="/imagens/twitter.svg">Twitter</a> | <a href="/imagens/linkedin.svg">LinkedIn</a></p>
+            </div>
         </div>
-      </div>
-
-      <nav class="nav" aria-label="Menu principal">
-        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="cursos.html">Cursos</a></li>
-          <li><a href="index.html#matricula">Matrícula</a></li>
-          <li><a href="index.html#sobre">Sobre</a></li>
-          <li>
-            <button class="theme-btn" id="themeToggle" type="button" aria-label="Alternar tema">
-              <span class="theme-icon" aria-hidden="true">🌙</span>
-              <span class="theme-text">Tema</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="conteudo">
-    <section class="section">
-      <div class="container">
-        <header class="section-header">
-          <h1>Nossos Cursos</h1>
-          <p>
-            Conheça os cursos disponíveis na EduTech Academy e encontre o melhor para
-            o seu futuro profissional.
-          </p>
-        </header>
-
-        <div class="cards-grid">
-          <article class="card">
-            <img src="https://picsum.photos/seed/web/900/500" alt="Imagem representando Desenvolvimento Web" />
-            <div class="card-body">
-              <h3>Desenvolvimento Web Fullstack</h3>
-              <ul class="meta">
-                <li>📘 120 horas</li>
-                <li>🖥️ EAD</li>
-              </ul>
+        <div class="footer-bottom">
+            <p>© 2025 EduTech Academy. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,72 +1,55 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduTech Academy | Desenvolvimento Web Fullstack</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web Fullstack | EduTech</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="brand">
-        <span class="logo" aria-hidden="true">🎓</span>
-        <div>
-          <strong class="brand-name">EduTech Academy</strong>
-          <small class="brand-tagline">Educação que transforma</small>
-        </div>
-      </div>
-
-      <nav class="nav" aria-label="Menu principal">
-        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="cursos.html">Cursos</a></li>
-          <li><a href="index.html#matricula">Matrícula</a></li>
-          <li><a href="index.html#sobre">Sobre</a></li>
-          <li>
-            <button class="theme-btn" id="themeToggle" type="button" aria-label="Alternar tema">
-              <span class="theme-icon" aria-hidden="true">🌙</span>
-              <span class="theme-text">Tema</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="conteudo">
-    <section class="section">
-      <div class="container course-layout">
-        <article class="course">
-          <header class="course-header">
-            <h1>Desenvolvimento Web Fullstack</h1>
-            <p>
-              Aprenda a desenvolver aplicações web completas, do back-end ao front-end.
-              Este curso abrange as principais tecnologias do mercado, incluindo HTML,
-              CSS, JavaScript, React, Node.js, e bancos de dados SQL e NoSQL.
-            </p>
-          </header>
-
-          <section class="course-block">
-            <h2>O que você vai aprender</h2>
-            <ul class="bullets">
-              <li>Fundamentos teóricos e práticos essenciais</li>
-              <li>Tecnologias e ferramentas atuais do mercado</li>
-              <li>Desenvolvimento de projetos reais</li>
-              <li>Metodologias ágeis e colaborativas</li>
-              <li>Preparação para o mercado de trabalho</li>
+    <header>
+        <div class="logo">EduTech Academy</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="index.html#matricula">Matrícula</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">🌙</button></li>
             </ul>
-          </section>
+        </nav>
+    </header>
 
-          <section class="course-block">
-            <h2>Conteúdo Programático</h2>
-            <ol class="program">
+    <img src="/imagens/fullstack.jpg" alt="Desenvolvimento Web" class="course-hero-img">
+
+    <main class="course-details">
+        <div>
+            <h1>Desenvolvimento Web Fullstack</h1>
+            <br>
+            <p>Aprenda a desenvolver aplicações web completas, do back-end ao front-end. Este curso abrange as principais tecnologias do mercado, incluindo HTML, CSS, JavaScript, React, Node.js, e bancos de dados SQL e NoSQL.</p>
+            <br>
+            <h3>O que você vai aprender:</h3>
+            <br>
+            <ul>
+                <li>Fundamentos teóricos e práticos essenciais</li>
+                <li>Tecnologias e ferramentas atuais do mercado</li>
+                <li>Desenvolvimento de projetos reais</li>
+                <li>Metodologias ágeis e colaborativas</li>
+                <li>Preparação para o mercado de trabalho</li>
+            </ul>
+        </div>
+        
+        <aside class="course-info-box">
+            <ul>
+                <li>📘 <strong>Carga Horária:</strong> 120 horas</li>
+                <li>🖥️ <strong>Modalidade:</strong> EAD</li>
+                <li>👥 <strong>Alunos Matriculados:</strong> 450</li>
+                <li>📚 <strong>Módulos:</strong> 8</li>
+                <li>📅 <strong>Próxima Turma:</strong> 15 de Abril, 2025</li>
+            </ul>
+            <a href="index.html#matricula" class="btn" style="display:block; margin-bottom:10px;">Inscrever-se Agora</a>
+            <a href="#" class="btn" style="display:block; background:var(--bg-color); color:var(--text-color); border:1px solid var(--border-color);">Solicitar Mais Informações</a>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
